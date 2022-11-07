@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
 
   // variables
   cols = 3;
+  category: string | undefined;
 
 
   constructor() { }
@@ -19,6 +20,10 @@ export class HomeComponent implements OnInit {
   // method
   onColumnsCountChange(colsNum: number): void {
     this.cols = colsNum
+  }
+
+  onShowCategory(newCategory: string): void {
+    this.category = newCategory
   }
 
 }

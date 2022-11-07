@@ -1,0 +1,18 @@
+<!-- click on the title to expand -->
+
+<!-- if the categories do exist -->
+<mat-expansion-panel *ngIf="categories">
+  <mat-expansion-panel-header>
+    <mat-panel-title>CATEGORIES</mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <!-- no multiple items -->
+  <mat-selection-list [multiple]="false">
+    <!-- create a boucle -->
+    <mat-list-option *ngFor="let category of categories" [value]="category">
+      <button (click)="onShowCategory(category)">
+        {{ category }}
+      </button>
+    </mat-list-option>
+  </mat-selection-list>
+</mat-expansion-panel>
